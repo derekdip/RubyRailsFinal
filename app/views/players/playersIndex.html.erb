@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Players</title>
+</head>
+<body>
+    <% if current_player %>
+    <p>Logged in as <%=current_player.username%></p>
+    <a href="/player/logout"><button>Logout</button></a>
+    <% end %>
+    <% @players.each do |player|%>
+        <p><%=player.username%></p>
+    <%end%>
+
+
+    <a href="/player/new"><button>New Player</button></a>
+
+</body>
+</html>
